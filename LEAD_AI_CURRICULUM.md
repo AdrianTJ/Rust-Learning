@@ -1,4 +1,4 @@
-# Lead AI Engineer Curriculum — 12 Months
+# AI Engineer Curriculum — 12 Months
 
 The companion track to [`CURRICULUM.md`](./CURRICULUM.md) (Rust) and
 [`PROJECTS.md`](./PROJECTS.md) (the build ladder). Built for: applied
