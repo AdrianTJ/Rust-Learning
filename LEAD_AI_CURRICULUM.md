@@ -2,7 +2,7 @@
 
 The companion track to [`CURRICULUM.md`](./CURRICULUM.md) (Rust) and
 [`PROJECTS.md`](./PROJECTS.md) (the build ladder). Built for: applied
-mathematician → lead AI engineer at a large financial company.
+mathematician → AI engineer.
 
 Strengths already banked: statistical modeling, optimization, CLI-first data
 work, agentic engineering, communication. Gaps this closes, in priority order:
