@@ -175,4 +175,9 @@ price fetcher (P6) plugs into the ledger (P3). By the capstone you're not
 learning syntax anymore — you're composing a system, which is exactly the point
 where a language stops being a subject and becomes a tool.
 
+**If you're also running [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md):**
+its eval runner is the year's spine project, and this ladder becomes the gym —
+Projects 1–2 as warm-ups, Project 6 as the async drill before eval runner v2,
+Projects 5 → 7 as the work-relevant electives, and 3/4/8 as optional.
+
 Track your progress in [`PROGRESS.md`](./PROGRESS.md).

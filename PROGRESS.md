@@ -1,7 +1,8 @@
 # Progress Tracker
 
-A checklist for the [`CURRICULUM.md`](./CURRICULUM.md) reading and the
-[`PROJECTS.md`](./PROJECTS.md) build ladder. Tick boxes as you go
+A checklist for the [`CURRICULUM.md`](./CURRICULUM.md) reading, the
+[`PROJECTS.md`](./PROJECTS.md) build ladder, and the 12-month
+[`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) track. Tick boxes as you go
 (`[ ]` → `[x]`). Started: _(fill in)_.
 
 ---
@@ -69,6 +70,59 @@ A checklist for the [`CURRICULUM.md`](./CURRICULUM.md) reading and the
 - [ ] **6 — Async Market-Data Fetcher** ★★★★☆ *(Phase 4)*
 - [ ] **7 — Rust hot-path as a Python module (PyO3)** ★★★★☆ *(Phase 4–5)*
 - [ ] **8 — Capstone: Mini Backtesting Engine** ★★★★★ *(Phase 5)*
+
+*(Per the [12-month map](./LEAD_AI_CURRICULUM.md): 1–2 are warm-ups, 6 is the
+async drill, 5 → 7 are the work-relevant electives, 3/4/8 are optional.)*
+
+---
+
+## Lead AI Engineer track (see [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md))
+
+### Phase 1 — Months 1–3 · Production & distributed systems
+- [ ] *Designing Data-Intensive Applications* — read cover to cover (~1 ch/week)
+- [ ] MIT 6.5840 — lectures
+- [ ] MIT 6.5840 — Lab 1 (MapReduce)
+- [ ] MIT 6.5840 — Lab 2 (Raft)
+- [ ] MIT 6.5840 — Lab 3
+- [ ] *Zero To Production in Rust* — started
+- [ ] **Eval runner v1** — grades all nine existing specs end-to-end
+- [ ] Self-check: can explain linearizability vs. eventual consistency with a real example
+
+### Phase 2 — Months 4–6 · LLM systems, evals & reliability
+- [ ] *AI Engineering* (Huyen) — read
+- [ ] *AI Evals for Engineers* (Husain & Shankar) — completed
+- [ ] SRE book — SLOs, monitoring, release engineering chapters
+- [ ] *Zero To Production in Rust* — finished
+- [ ] **Eval runner v2** — parallel, job log, CI gate, regression detection
+- [ ] Wired into GitHub Actions; a prompt/model change triggers quantified regression
+- [ ] Stretch: statistical treatment of flaky evals (significance of a pass-rate drop)
+- [ ] Inference-economics memo — one page, decision-first
+
+### Phase 3 — Months 7–9 · Model risk, governance & security
+- [ ] SR 11-7 — read the primary source
+- [ ] NIST AI RMF 1.0 + Generative AI profile — read
+- [ ] EU AI Act — risk tiers and high-risk obligations understood
+- [ ] OWASP Top 10 for LLM Applications + Willison's prompt-injection series
+- [ ] **Red-team evals** in the repo (injection, exfiltration, jailbreaks)
+- [ ] **Model validation pack** — model card + SR 11-7-style validation doc
+- [ ] Encoded as `assess-model-risk` and `red-team-agent` skills
+- [ ] Self-check: could negotiate "validated" with the MRM team, in their language
+
+### Phase 4 — Months 10–12 · Staff-level leadership craft
+- [ ] *The Staff Engineer's Path* (Reilly) — read
+- [ ] *Staff Engineer* (Larson) — read
+- [ ] Design doc/RFC at work — month 10
+- [ ] Design doc/RFC at work — month 11
+- [ ] Design doc/RFC at work — month 12
+- [ ] Build-vs-buy analysis — presented decision-first
+- [ ] ADRs written retroactively for own repos
+- [ ] (if available) Incident review written up
+- [ ] `write-design-doc` and `build-vs-buy` skills encoded
+- [ ] Self-check: a design doc I wrote changed a real decision; I know my archetype direction
+
+### Continuous threads (all year)
+- [ ] Writing: one post per month *(log them in Notes below)*
+- [ ] Feed set up: Willison, Huyen, Husain, Yan, Larson
 
 ---
 

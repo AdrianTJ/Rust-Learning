@@ -29,6 +29,11 @@ Everything else (generics, error handling, iterators, closures) will feel
 natural given your background — you already think in types and higher-order
 functions.
 
+> **Companion track:** this file covers the *language*. The 12-month
+> [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) schedules it alongside
+> distributed systems, LLM evals, model risk, and staff-level craft — and
+> decides which [`PROJECTS.md`](./PROJECTS.md) builds are spine vs. elective.
+
 ---
 
 ## Phase 0 — Setup & orientation (a few hours)
@@ -141,6 +146,13 @@ difference between "Python person writing Rust" and "Rust engineer."
 - **Effective Rust — David Drysdale.** Short, dense, 35 specific idiomatic items
   ("Effective C++"-style). Best read *after* you've written some Rust so the
   advice lands. Free online: <https://effective-rust.com/>
+- **Zero To Production in Rust — Luca Palmieri.** Builds a real web service with
+  production discipline: testing, telemetry, CI, deployment.
+  <https://www.zero2prod.com/> If you're following
+  [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md), this starts earlier
+  (months 2–3, between Phases 2 and 3 here) — it teaches Rust *and* production
+  engineering in one pass, and can stand in for parts of *Programming Rust* if
+  time is tight (keep PR ch. 4–5 and 11 regardless).
 
 **Checkpoint:** you write APIs others would enjoy using; you know when to reach
 for `unsafe` and (mostly) how to avoid it.
