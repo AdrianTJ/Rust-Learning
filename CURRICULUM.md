@@ -33,6 +33,10 @@ functions.
 > [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) schedules it alongside
 > distributed systems, LLM evals, model risk, and staff-level craft — and
 > decides which [`PROJECTS.md`](./PROJECTS.md) builds are spine vs. elective.
+>
+> **To actually do it:** [`CHECKLIST.md`](./CHECKLIST.md) is the tracker — this
+> reading list, that schedule, and those projects merged into one ordered list
+> of steps. Come back here for the *why*; go there for the *next*.
 
 ---
 

@@ -231,4 +231,4 @@ your gap is systems design, not algorithms.
 SR 11-7 + red-teaming → design docs — with Rust as the vehicle throughout and
 the eval runner as the artifact that ties all four phases together.**
 
-Track progress in [`PROGRESS.md`](./PROGRESS.md).
+Track progress in [`CHECKLIST.md`](./CHECKLIST.md).

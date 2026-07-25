@@ -12,12 +12,16 @@ blank `main.rs`), *stretch goals* for when it's too easy, and a *definition of
 done* so you know when to move on.
 
 Put each project in its own crate under `projects/` (you already have
-`hello_cargo` and `guessing_game` there):
+`hello_cargo` and `guessing_game` there). The repo root is a Cargo workspace
+that globs `projects/*`, so a new crate joins it automatically — run this from
+the root:
 
 ```bash
-cd projects
-cargo new interest_calculator
+cargo new projects/interest_calculator
 ```
+
+Then `cargo run -p interest_calculator` to run it, or `cargo check --workspace`
+to type-check everything at once.
 
 ---
 
@@ -180,4 +184,4 @@ its eval runner is the year's spine project, and this ladder becomes the gym —
 Projects 1–2 as warm-ups, Project 6 as the async drill before eval runner v2,
 Projects 5 → 7 as the work-relevant electives, and 3/4/8 as optional.
 
-Track your progress in [`PROGRESS.md`](./PROGRESS.md).
+Track your progress in [`CHECKLIST.md`](./CHECKLIST.md).
