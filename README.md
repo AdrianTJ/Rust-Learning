@@ -29,6 +29,8 @@ cargo run -p guessing_game
   Start here.
 - [`CURRICULUM.md`](./CURRICULUM.md) — why each Rust resource, and how fast to read it
 - [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) — the 12-month AI engineer track
+- [`TYPESCRIPT_TRACK.md`](./TYPESCRIPT_TRACK.md) — *proposal, undecided:* a 3–4 week
+  TypeScript sprint before the Rust track, and the case for it
 - [`PROJECTS.md`](./PROJECTS.md) — the 8-project build ladder
 - `projects/` — the crates themselves
 
