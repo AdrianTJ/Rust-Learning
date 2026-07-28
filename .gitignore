@@ -31,6 +31,11 @@ target
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
+# Node / TypeScript (typescript/ side quest)
+node_modules/
+dist/
+*.tsbuildinfo
+
 # Environments
 .env
 .env.*
