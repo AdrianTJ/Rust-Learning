@@ -29,6 +29,9 @@ cargo run -p guessing_game
   Start here.
 - [`CURRICULUM.md`](./CURRICULUM.md) — why each Rust resource, and how fast to read it
 - [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) — the 12-month AI engineer track
+- [`typescript/`](./typescript/) — a self-contained side quest: 3–4 weeks of
+  TypeScript, ending in an agent harness. Own curriculum and checklist; not a
+  prerequisite for anything above.
 - [`PROJECTS.md`](./PROJECTS.md) — the 8-project build ladder
 - `projects/` — the crates themselves
 
