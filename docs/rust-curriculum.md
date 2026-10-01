@@ -30,11 +30,11 @@ natural given your background — you already think in types and higher-order
 functions.
 
 > **Companion track:** this file covers the *language*. The 12-month
-> [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) schedules it alongside
+> [`lead-ai-year.md`](./lead-ai-year.md) schedules it alongside
 > distributed systems, LLM evals, model risk, and staff-level craft — and
-> decides which [`PROJECTS.md`](./PROJECTS.md) builds are spine vs. elective.
+> decides which [`rust-projects.md`](./rust-projects.md) builds are spine vs. elective.
 >
-> **To actually do it:** [`CHECKLIST.md`](./CHECKLIST.md) is the tracker — this
+> **To actually do it:** [`CHECKLIST.md`](../CHECKLIST.md) is the tracker — this
 > reading list, that schedule, and those projects merged into one ordered list
 > of steps. Come back here for the *why*; go there for the *next*.
 
@@ -153,7 +153,7 @@ difference between "Python person writing Rust" and "Rust engineer."
 - **Zero To Production in Rust — Luca Palmieri.** Builds a real web service with
   production discipline: testing, telemetry, CI, deployment.
   <https://www.zero2prod.com/> If you're following
-  [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md), this starts earlier
+  [`lead-ai-year.md`](./lead-ai-year.md), this starts earlier
   (months 2–3, between Phases 2 and 3 here) — it teaches Rust *and* production
   engineering in one pass, and can stand in for parts of *Programming Rust* if
   time is tight (keep PR ch. 4–5 and 11 regardless).

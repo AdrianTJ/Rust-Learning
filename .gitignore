@@ -36,6 +36,16 @@ node_modules/
 dist/
 *.tsbuildinfo
 
+# Python (ml-systems/ track)
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+wandb/
+*.pt
+*.ckpt
+*.safetensors
+
 # Environments
 .env
 .env.*
