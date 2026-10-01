@@ -9,10 +9,13 @@ The others are reference — consult them when a step points you there:
 - [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md) — *why* each non-Rust track matters
 - [`PROJECTS.md`](./PROJECTS.md) — milestones, stretch goals, and definitions of done for Projects 1–8
 
+The other two tracks keep their own checklists and don't feed into this one:
+[`ml-systems/`](./ml-systems/CHECKLIST.md) and [`typescript/`](./typescript/CHECKLIST.md).
+
 When a step says "Project 2, milestones 3–4," the milestones are in `PROJECTS.md`.
 Don't copy them back here — keep this a checklist.
 
-**Started:** 2026-07-25
+**Set up:** 2026-07-25 · **Started:** _______
 
 ---
 
@@ -39,7 +42,7 @@ language has to be in your hands first. DDIA picks up at step 14, once Rust
 shifts from reading to drilling.
 
 If you want a parallel track rather than a strict line, DDIA (steps 14–15, 18,
-24) is the one thing here that can run alongside anything above it without
+23) is the one thing here that can run alongside anything above it without
 breaking a dependency.
 
 ---
@@ -142,7 +145,7 @@ breaking a dependency.
 ### 11 · Concurrency
 
 - [ ] **Read** Book ch. 16 — fearless concurrency
-- [ ] **Skim** Book ch. 17 — async *(a real read comes at step 19)*
+- [ ] **Skim** Book ch. 17 — async *(a real read comes at step 20)*
 - [ ] **Drill** Rustlings `threads`
 
 ### 12 · Finish the drills
@@ -166,17 +169,22 @@ breaking a dependency.
 
 ### 14 · DDIA, first half
 
-- [ ] **Read** DDIA ch. 1 — reliable, scalable, maintainable applications
-- [ ] **Read** DDIA ch. 2 — data models and query languages
-- [ ] **Read** DDIA ch. 3 — storage and retrieval
-- [ ] **Read** DDIA ch. 4 — encoding and evolution
+*Use the **2nd edition** (Kleppmann & Riccomini, 2026). Its chapter numbers
+differ from the 1st edition's — it opens with two new chapters on trade-offs
+and nonfunctional requirements — so steps below name chapters by topic.*
+
+- [ ] **Read** DDIA — trade-offs in data systems architecture; defining
+      nonfunctional requirements *(the 2nd edition's new opening chapters)*
+- [ ] **Read** DDIA — data models and query languages
+- [ ] **Read** DDIA — storage and retrieval
+- [ ] **Read** DDIA — encoding and evolution
 - [ ] **Write** notes per chapter — this book rewards note-taking more than most
 
 ### 15 · DDIA, distributed data
 
-- [ ] **Read** DDIA ch. 5 — replication
-- [ ] **Read** DDIA ch. 6 — partitioning
-- [ ] **Read** DDIA ch. 7 — transactions
+- [ ] **Read** DDIA — replication
+- [ ] **Read** DDIA — sharding / partitioning
+- [ ] **Read** DDIA — transactions
 - [ ] **Write** what "eventual" actually costs you, with a real example
 
 ### 16 · MIT 6.5840 opens
@@ -198,9 +206,11 @@ single-harness is fine — correctness before complexity.
 
 ### 18 · Consensus
 
-- [ ] **Read** DDIA ch. 8 — the trouble with distributed systems
-- [ ] **Read** DDIA ch. 9 — consistency and consensus
-- [ ] **Course** ✅ **Lab 2 (Raft)** — the hardest lab; give it real time
+- [ ] **Read** DDIA — the trouble with distributed systems
+- [ ] **Read** DDIA — consistency and consensus
+- [ ] **Course** ✅ **Lab 2 (key/value server)** — retries and `ErrMaybe`; the
+      idempotency problem, made rigorous
+- [ ] **Course** ✅ **Lab 3 (Raft)** — the hardest lab; give it real time
 
 ### 19 · Checkpoint — systems
 
@@ -237,9 +247,9 @@ you can defend the statistics behind the threshold.*
 ### 23 · Reliability
 
 - [ ] **Read** SRE book — SLOs, monitoring, release engineering *(skim the rest)*
-- [ ] **Read** DDIA ch. 10–11 — batch and stream processing
-- [ ] ✅ **DDIA ch. 12 + wrap-up — book done**
-- [ ] **Course** ✅ **6.5840 Lab 3**
+- [ ] **Read** DDIA — batch and stream processing
+- [ ] ✅ **DDIA's closing chapter(s) — book done**
+- [ ] **Course** ✅ **6.5840 Lab 4** — fault-tolerant key/value service on your Raft
 
 ### 24 · Eval runner v2
 

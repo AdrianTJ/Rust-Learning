@@ -52,12 +52,12 @@ blog post — you edit a journal; use that muscle, it compounds everything else)
 The gap between "mathematician who codes well" and "lead engineer." Everything
 else stacks on this.
 
-**Spine book:** *Designing Data-Intensive Applications* — Kleppmann. Read it
-cover to cover, ~1 chapter/week. The single highest-leverage book for you.
+**Spine book:** *Designing Data-Intensive Applications*, 2nd ed. (2026) —
+Kleppmann & Riccomini. Read it cover to cover, ~1 chapter/week. The single highest-leverage book for you.
 
 **Course:** [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) (formerly 6.824),
 Distributed Systems — lectures and labs are free online. Do at least Labs 1–3
-(MapReduce, Raft). Labs are in Go, which you already know, so the learning is
+(MapReduce, key/value server, Raft). Labs are in Go, which you already know, so the learning is
 pure systems, not syntax.
 
 **Rust thread:** The Book to completion with Rustlings, per
@@ -221,7 +221,8 @@ growing toward.
 
 ## Deliberately excluded
 
-More ML theory (you have it) · more languages beyond Rust/Go/Python ·
+More ML theory (you have it; the hands-on *training* practice lives in the
+separate [`ml-systems/`](./ml-systems/) track) · more languages beyond Rust/Go/Python ·
 Kubernetes internals (concepts yes, YAML no) · leetcode-style algorithms —
 your gap is systems design, not algorithms.
 
