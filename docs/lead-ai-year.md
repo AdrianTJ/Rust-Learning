@@ -1,7 +1,7 @@
 # AI Engineer Curriculum — 12 Months
 
-The companion track to [`CURRICULUM.md`](./CURRICULUM.md) (Rust) and
-[`PROJECTS.md`](./PROJECTS.md) (the build ladder). Built for: applied
+The companion track to [`rust-curriculum.md`](./rust-curriculum.md) (Rust) and
+[`rust-projects.md`](./rust-projects.md) (the build ladder). Built for: applied
 mathematician → AI engineer.
 
 Strengths already banked: statistical modeling, optimization, CLI-first data
@@ -24,15 +24,15 @@ So, one explicit decision up front:
 
 > **The eval runner is the spine project of the year.** It's the artifact that
 > ties all four phases together (v1 → concurrent v2 → security regression →
-> the thing your design docs are about). The finance ladder in `PROJECTS.md`
+> the thing your design docs are about). The finance ladder in `rust-projects.md`
 > becomes the *gym*: warm-ups and electives scheduled where they teach a Rust
 > concept the spine is about to need.
 
 ### The 12-month map
 
-| Months | This track | Rust reading ([`CURRICULUM.md`](./CURRICULUM.md)) | Building |
+| Months | This track | Rust reading ([`rust-curriculum.md`](./rust-curriculum.md)) | Building |
 |---|---|---|---|
-| **1–3** | Production & distributed systems (DDIA, MIT 6.5840) | Phases 1–2: The Book + Rustlings, 100 Exercises | Warm-ups: Projects **1–2** (finance ladder) → **eval runner v1** |
+| **1–3** | Rust foundations *(DDIA + MIT 6.5840 moved to the ML systems track)* | Phases 1–2: The Book + Rustlings, 100 Exercises | Warm-ups: Projects **1–2** (finance ladder) → **eval runner v1** |
 | **4–6** | LLM systems, evals & reliability (Huyen, Husain/Shankar, SRE) | Phase 3: *Programming Rust* + *Zero To Production*; Book ch. 17 (async) for real now | Project **6** (async fetcher, as a tokio drill) → **eval runner v2** |
 | **7–9** | Model risk, governance & security (SR 11-7, NIST, OWASP) | Phase 4: *Rust for Rustaceans*, *Effective Rust* | **Red-team evals** + **model validation pack**; elective: Project **7** (PyO3) |
 | **10–12** | Staff-level leadership craft (Reilly, Larson) | Phase 5: domain crates (Polars, ndarray, Candle) | Design docs, ADRs, build-vs-buy; elective capstone: Project **5** or **8** |
@@ -47,21 +47,17 @@ blog post — you edit a journal; use that muscle, it compounds everything else)
 
 ---
 
-## Phase 1 · Months 1–3 — Production & distributed systems foundations
+## Phase 1 · Months 1–3 — Rust foundations and eval runner v1
 
-The gap between "mathematician who codes well" and "lead engineer." Everything
-else stacks on this.
-
-**Spine book:** *Designing Data-Intensive Applications*, 2nd ed. (2026) —
-Kleppmann & Riccomini. Read it cover to cover, ~1 chapter/week. The single highest-leverage book for you.
-
-**Course:** [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) (formerly 6.824),
-Distributed Systems — lectures and labs are free online. Do at least Labs 1–3
-(MapReduce, key/value server, Raft). Labs are in Go, which you already know, so the learning is
-pure systems, not syntax.
+> **Moved (2026-10):** this phase used to open with *DDIA* and MIT 6.5840.
+> Systems design is one of the two gaps you most want to close, and here it
+> sat behind the slowest track in the repo. Both now live in the
+> [ML systems track](./ml-systems-curriculum.md), Part IV, which doesn't
+> wait on Rust. DDIA is still the single highest-leverage book for you; it
+> just has a better home.
 
 **Rust thread:** The Book to completion with Rustlings, per
-[`CURRICULUM.md`](./CURRICULUM.md) Phases 1–2 (slow chapters: 4, 9, 10, 15).
+[`rust-curriculum.md`](./rust-curriculum.md) Phases 1–2 (slow chapters: 4, 9, 10, 15).
 Then start [*Zero To Production in Rust*](https://www.zero2prod.com/)
 (Palmieri) — it teaches Rust *and* production discipline (testing, telemetry,
 CI, deployment) in one pass, which is exactly your combination of gaps. It
@@ -80,9 +76,7 @@ through one harness, score the `expect` assertions from the event stream, print
 a report. Sequential and single-harness is fine — correctness first (your own
 `model-data` skill's rule: baseline before complexity).
 
-**Done when:** you can explain the difference between linearizability and
-eventual consistency with a real example; your Raft lab passes tests; eval
-runner v1 grades your nine existing specs end-to-end.
+**Done when:** eval runner v1 grades your nine existing specs end-to-end.
 
 ---
 
@@ -209,7 +203,7 @@ growing toward.
 
 ## Continuous threads (all year)
 
-- **Rust:** the reading order lives in [`CURRICULUM.md`](./CURRICULUM.md); this
+- **Rust:** the reading order lives in [`rust-curriculum.md`](./rust-curriculum.md); this
   file only schedules it. After *Zero To Production*, go deeper with *Rust for
   Rustaceans* (Gjengset) and his live-coding videos. Every phase's project is
   your Rust gym.
@@ -222,14 +216,15 @@ growing toward.
 ## Deliberately excluded
 
 More ML theory (you have it; the hands-on *training* practice lives in the
-separate [`ml-systems/`](./ml-systems/) track) · more languages beyond Rust/Go/Python ·
+separate [ML systems](./ml-systems-curriculum.md) track) · more languages beyond Rust/Go/Python ·
 Kubernetes internals (concepts yes, YAML no) · leetcode-style algorithms —
 your gap is systems design, not algorithms.
 
 ## The one-line version
 
-**DDIA + distributed systems labs → eval engineering on your own toolkit →
-SR 11-7 + red-teaming → design docs — with Rust as the vehicle throughout and
-the eval runner as the artifact that ties all four phases together.**
+**Rust foundations → eval engineering on your own toolkit → SR 11-7 +
+red-teaming → design docs — with Rust as the vehicle throughout and the eval
+runner as the artifact that ties all four phases together.** *(Distributed
+systems lives in the ML systems track.)*
 
-Track progress in [`CHECKLIST.md`](./CHECKLIST.md).
+Track progress in [`CHECKLIST.md`](../CHECKLIST.md).

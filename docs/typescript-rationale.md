@@ -86,17 +86,20 @@ So the split isn't a compromise, it's correct:
 **Three to four weeks, not two months.** The source curriculum estimates *twelve
 hours* of material. Two months of calendar against twelve hours of content gets
 filled with tutorials nobody needs. Thirty hours: ten on the language, twenty
-building. Hence the exit criterion in [`README.md`](./README.md).
+building. Hence the exit criterion in [`typescript-overview.md`](./typescript-overview.md).
 
-**Nothing in the Rust track has been edited.** The root `CHECKLIST.md`,
-`CURRICULUM.md`, and `LEAD_AI_CURRICULUM.md` are untouched and this folder is
-not a prerequisite for any of them. But one decision is worth making
-deliberately, because it changes what the Rust year looks like:
+**This track is not a prerequisite for the Rust track, or the reverse.** One
+decision was originally left open here:
 
-> **Build eval runner v1 in TypeScript. Let the Rust version be v2 — a port
-> against a known spec.**
+> *Build eval runner v1 in TypeScript, and let the Rust version be v2: a port
+> against a known spec?*
 
-The argument for it:
+**Decided (2026-10): no.** The eval runner stays in the Rust track only, and
+the TypeScript capstone is an MCP-connected harness instead. The reason is
+independence: with the runner in both tracks, neither track could finish
+without the other. The argument that was made *for* the TypeScript-first
+version is kept below because it's still a good argument, just not the one
+that won:
 
 - v1 in TypeScript means discovering **what the artifact needs to be** while
   the language is out of the way. The current plan has you designing the runner
@@ -109,12 +112,10 @@ The argument for it:
 - Rust practice doesn't disappear, it relocates to the finance ladder, where
   it's the better tool anyway.
 
-Net cost: about three weeks. Net gain: the spine project ships months earlier
-and the rewrite has a spec.
-
-If you take that decision, the root `CHECKLIST.md` step 17 and
-`LEAD_AI_CURRICULUM.md` Phase 1 need re-pointing. Left alone for now on purpose
-— that's an edit to the Rust track, and this is a side quest.
+If you ever revisit it, you'd change Rust step R13 in the root checklist and
+replace T10 here. Until then, the TypeScript harness work still pays off for
+the Rust runner, because it shows you what a harness has to handle before you
+write one in Rust.
 
 ---
 
@@ -194,11 +195,11 @@ absent, including two things the overview explicitly promises:
   feature in Claude Code, entirely absent.
 - **Subprocess done properly** — the exercise says `exec`; a harness needs
   `spawn` with streaming, timeout, kill signal, and truncation.
-- **Testing with a fake model client** — disqualifying to omit, for someone
-  whose spine project is an eval runner.
+- **Testing with a fake model client** — disqualifying to omit; a harness you
+  can't test offline is one you can't change safely.
 - **Structured logging** of the loop.
 
-[`CURRICULUM.md`](./CURRICULUM.md) keeps modules 1–4 with the fixes above,
+[`typescript-curriculum.md`](./typescript-curriculum.md) keeps modules 1–4 with the fixes above,
 replaces the capstone, and adds modules 5–10 for the list above.
 
 ---
@@ -207,7 +208,7 @@ replaces the capstone, and adds modules 5–10 for the list above.
 
 **The premise holds — three to four weeks, not two months; the harness gets
 built in TypeScript because that's what it's good at; Rust keeps the numerics
-and gets the rewrite.**
+and the eval runner.**
 
 ---
 

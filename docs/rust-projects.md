@@ -1,7 +1,7 @@
 # Learn-by-Doing: A Rust Project Ladder
 
 A sequence of projects that escalate in difficulty **in lockstep with
-[`CURRICULUM.md`](./CURRICULUM.md)**. Each one is chosen to force you to use the
+[`rust-curriculum.md`](./rust-curriculum.md)**. Each one is chosen to force you to use the
 concepts you're reading about at that moment, and — wherever possible — it's
 drawn from your world (finance, data, ML) so the payoff is real.
 
@@ -11,10 +11,10 @@ the *crates* involved, a *build path* (milestones so you're never staring at a
 blank `main.rs`), *stretch goals* for when it's too easy, and a *definition of
 done* so you know when to move on.
 
-Put each project in its own crate under `projects/` (you already have
-`hello_cargo` and `guessing_game` there). The repo root is a Cargo workspace
-that globs `projects/*`, so a new crate joins it automatically — run this from
-the root:
+Put each project in its own crate under `rust/projects/` (you already have
+`hello_cargo` and `guessing_game` there). `rust/` is a Cargo workspace that
+globs `projects/*`, so a new crate joins it automatically — run this from
+`rust/`:
 
 ```bash
 cargo new projects/interest_calculator
@@ -179,9 +179,9 @@ price fetcher (P6) plugs into the ledger (P3). By the capstone you're not
 learning syntax anymore — you're composing a system, which is exactly the point
 where a language stops being a subject and becomes a tool.
 
-**If you're also running [`LEAD_AI_CURRICULUM.md`](./LEAD_AI_CURRICULUM.md):**
+**If you're also running [`lead-ai-year.md`](./lead-ai-year.md):**
 its eval runner is the year's spine project, and this ladder becomes the gym —
 Projects 1–2 as warm-ups, Project 6 as the async drill before eval runner v2,
 Projects 5 → 7 as the work-relevant electives, and 3/4/8 as optional.
 
-Track your progress in [`CHECKLIST.md`](./CHECKLIST.md).
+Track your progress in [`CHECKLIST.md`](../CHECKLIST.md).

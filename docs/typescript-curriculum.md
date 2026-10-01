@@ -1,8 +1,8 @@
 # A TypeScript Curriculum — for building agent harnesses
 
 The *why* behind each module. For the ordered list of things to actually do,
-see [`CHECKLIST.md`](./CHECKLIST.md). For why this side quest exists at all,
-see [`RATIONALE.md`](./RATIONALE.md).
+see [`CHECKLIST.md`](../CHECKLIST.md) (section **T**). For why this side quest exists at all,
+see [`typescript-rationale.md`](./typescript-rationale.md).
 
 Scoped for someone with twelve years of Python, no TypeScript, and exactly one
 goal: build and read LLM agent harnesses. Everything outside that goal is cut.
@@ -36,7 +36,7 @@ remap of something you already do. Read it fast.
 TypeScript historically meant a compile step. It doesn't anymore: `tsx`
 transpiles on the fly, so `npx tsx src/index.ts` is your `python script.py`.
 
-Setup lives in [`README.md`](./README.md). The only conceptual content is the
+Setup lives in [`typescript/README.md`](../typescript/README.md). The only conceptual content is the
 ESM/`.js`-extension gotcha, and the only reason it gets an hour is that
 everyone loses forty minutes to it once.
 
@@ -166,8 +166,8 @@ and cannot be talked out of its allowlist.
 
 ## Module 8 · Testing — 3 hours
 
-Your spine project is an eval runner. A harness you can't test deterministically
-is a harness you can't build an eval runner *on*.
+A harness you can't test deterministically is a harness you can't trust, or
+change without fear.
 
 Define the model client as an interface, then write a fake that replays scripted
 responses. Now the whole loop — tool dispatch, validation failures, retries,
@@ -178,27 +178,31 @@ you don't need a framework.
 
 **Done when:** `npm test` exercises the full loop with no network access.
 
-## Module 9 · Capstone — eval runner v1 — 8 hours
+## Module 9 · Capstone — plug into the real ecosystem — 6 hours
 
-Milestones, in order:
+The harness you've built is a closed world: tools you wrote, called by a loop
+you wrote. The capstone opens it up.
 
-1. **Discover** `agents/*/eval/*.eval.yaml`, parse them, print what was found.
-   Validate the spec shape with Zod — same discipline as tool args.
-2. **Drive** one agent through one harness for one spec.
-3. **Score** the `expect` assertions off the event stream.
-4. **Report** — a readable summary plus machine-readable JSON.
-5. **Concurrency** — run specs in parallel with a bounded worker pool.
-   Unbounded `Promise.all` over fifty specs will rate-limit you instantly;
-   a semaphore is about fifteen lines.
+1. **MCP client.** Read the MCP spec overview, then use the **MCP TypeScript
+   SDK** to make your harness a client. Connect one off-the-shelf server (the
+   filesystem or git reference servers are the obvious picks) and expose its
+   tools through the same `defineTool` / validation / approval path as your own.
+   The spec's schema is authored in TypeScript and generated to JSON Schema,
+   which is, on its own, a decent argument for this whole detour.
+2. **One real task, end to end.** Point the harness at a real repo and give it a
+   real job, e.g. "find and fix the failing test." Approval prompts,
+   cancellation, timeouts, and streaming all have to hold up under a task you
+   didn't script.
 
-Sequential and single-harness is fine through milestone 4. Correctness before
-complexity — baseline first.
+Deliberately *not* the eval runner. That's the Rust track's spine project, and
+keeping it there is what keeps the tracks independent.
 
-**Done when:** it grades all nine existing specs end to end.
+**Done when:** the harness completes one real task through an MCP server, and
+Ctrl-C at any point leaves valid history.
 
 ## Module 10 · Read the real thing
 
-Worth as much as the nine modules above it, and the actual payoff of the side
+Worth as much as the modules above it, and the actual payoff of the side
 quest: **the best harnesses in existence are open source and written in the
 language you just learned.**
 
@@ -210,9 +214,7 @@ are what every tutorial omits and every real harness is organized around:
    dropped, and who decides?
 3. How does the permission prompt interrupt the loop without corrupting history?
 
-Then skim the **MCP TypeScript SDK**. The spec's schema is authored in
-TypeScript and generated to JSON Schema — which is, on its own, a decent
-argument for this whole detour.
+In the checklist this is folded into T10, alongside the capstone.
 
 ---
 
@@ -224,8 +226,8 @@ argument for this whole detour.
    exists. Use as reference, not a course. <https://www.totaltypescript.com/>
 3. **Zod docs** — <https://zod.dev/>. Short; read all of it.
 4. **Anthropic API docs** — tool use, streaming, prompt caching.
-5. **MCP spec + TypeScript SDK** — <https://modelcontextprotocol.io/>. After
-   module 4.
+5. **MCP spec + TypeScript SDK** — <https://modelcontextprotocol.io/>. The
+   capstone.
 6. **Claude Code / Gemini CLI source** — module 10. The real curriculum.
 
 ## Timeline

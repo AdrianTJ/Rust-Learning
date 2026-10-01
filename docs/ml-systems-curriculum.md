@@ -1,8 +1,8 @@
 # An ML Systems Curriculum: training and serving
 
 The *why* behind each part. For the ordered list of things to actually do, see
-[`CHECKLIST.md`](./CHECKLIST.md). For the resources and setup, see
-[`README.md`](./README.md).
+[`CHECKLIST.md`](../CHECKLIST.md) (section **M**). For the resources and setup, see
+[`ml-systems-overview.md`](./ml-systems-overview.md).
 
 Scoped for an applied mathematician who knows ML theory cold, writes Python
 fluently, and has never trained a network end to end or designed a service.
@@ -153,10 +153,47 @@ into something you can talk through in a design conversation.
 the API docs, it degrades gracefully under 10× the load it was designed for,
 and the design doc defends every number in it.
 
-## Part IV · Scale (later, optional)
+## Part IV · Distributed systems: DDIA + MIT 6.5840
 
-Only once Parts I–III are done. Multi-GPU training is where "ML systems"
-becomes a specialty of its own:
+*Moved here from the Rust track (2026-10). It used to sit behind 13 steps of
+Rust, which made the systems-design gap wait on the slowest track in the repo.*
+
+Part III teaches you to design a service. This part teaches you how the
+databases and services it sits on behave when machines fail, the network
+partitions, and clocks disagree. That's the difference between drawing a
+system-design diagram and defending one.
+
+**Spine book:** *Designing Data-Intensive Applications*, **2nd edition**
+(Kleppmann & Riccomini, 2026). About a chapter a week, with notes. The 2nd
+edition opens with two new chapters (trade-offs in data systems architecture;
+nonfunctional requirements), so its chapter numbers don't match the 1st
+edition's. The checklist names chapters by topic for that reason. Read it all,
+but note two links to this track: *encoding and evolution* is API versioning
+for data, and *replication*/*consistency* are what your Part III service's
+database is quietly doing for you.
+
+**Course:** [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) (formerly 6.824),
+lectures and labs free online. Labs 1–4: MapReduce, a key/value server, Raft,
+and a fault-tolerant key/value service on your own Raft. **The labs are in Go.**
+If Go is new to you, *A Tour of Go* takes a weekend and is enough. The labs use
+a small, plain subset, and goroutines plus channels are the only new ideas.
+
+Lab 2 deserves a note: it's an API-semantics lab in disguise. Clients retry, and
+a `Put` whose reply got lost returns `ErrMaybe`. That's the idempotency problem
+from Part III, made rigorous.
+
+**When to start:** the reading has no dependency on Parts I–III. If Part II's
+training runs leave you waiting on a GPU, that's a good time to read DDIA. The
+labs are best after Part III, once you've built a service and felt why these
+guarantees matter.
+
+**Done when:** you can explain linearizability vs. eventual consistency with a
+real example, and your Raft passes its tests.
+
+## Off the main line · Scale
+
+Multi-GPU training is where "ML systems" becomes a specialty of its own. Only
+if you want to go there:
 
 - [*The Ultra-Scale Playbook*](https://huggingface.co/spaces/nanotron/ultrascale-playbook)
   (Hugging Face). Data, tensor, pipeline, and context parallelism, ZeRO/FSDP,
@@ -171,18 +208,11 @@ becomes a specialty of its own:
 
 ## How this connects to the other tracks
 
-It doesn't, on purpose. But two pieces of the root track overlap, and it's
-worth knowing which ones:
-
-- **DDIA** (root [`CHECKLIST.md`](../CHECKLIST.md) Part II) is the
-  data-systems layer *beneath* Part III here: replication, partitioning,
-  consistency. Part III teaches you to design a service; DDIA teaches you
-  how the databases it sits on actually behave.
-- **MIT 6.5840 Lab 2** (the key/value server) is an API-semantics lab in
-  disguise. Clients retry, and a `Put` whose reply got lost returns
-  `ErrMaybe`. That's the idempotency problem from Part III, made rigorous.
+It doesn't, on purpose. Nothing here waits on Rust or TypeScript, and nothing
+there waits on this.
 
 ## The one-line version
 
 **Build autograd in NumPy, train a GPT in PyTorch until you can explain its loss
-curve, then serve it behind an API you can defend in a design review.**
+curve, serve it behind an API you can defend, then learn what the systems
+underneath it guarantee.**
