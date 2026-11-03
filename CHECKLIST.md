@@ -242,6 +242,7 @@ Will Larson.
 
 ### R1 · Setup and the guessing game
 
+- [ ] `rustup update` *(installed 1.97 in July; stable is 1.99 as of Nov 2026)*
 - [ ] Install Rustlings: `cargo install rustlings` then `rustlings init`
 - [ ] **Read** Book ch. 1–3 *(skim; read for syntax)*
 - [ ] **Build** finish `projects/guessing_game` per Book ch. 2: add `rand`,

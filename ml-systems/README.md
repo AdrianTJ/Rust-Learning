@@ -13,6 +13,13 @@ curl -sSL mlsysbook.ai/tinytorch/install.sh | bash
 cd tinytorch && source .venv/bin/activate && tito setup
 ```
 
+> **Expect rough edges.** TinyTorch is an early release (v0.2.x as of Nov 2026).
+> Its README says local installs work but may be rough, and APIs will keep
+> shifting until the Spring 2027 classroom release. If `tito setup` or a module
+> test breaks, check the
+> [releases page](https://github.com/harvard-edge/cs249r_book/releases) and
+> issues before assuming it's you. The module numbers have stayed the same so far.
+
 That puts your TinyTorch work inside this repo, and `.venv/` is already
 gitignored. If the installer creates a nested `.git` inside `tinytorch/`,
 delete it so your solutions get committed here; otherwise git will treat the
